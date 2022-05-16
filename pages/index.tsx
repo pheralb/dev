@@ -1,13 +1,18 @@
 import { GetStaticProps } from "next";
 import { getAllDocs } from "functions";
 import { DocMeta } from "interfaces/docMeta";
+import { Box, Link, Flex, Text } from "@chakra-ui/react";
 import Documents from "components/documents";
+import NextLink from "next/link";
+import BioSide from "components/bioSide";
 
 export default function Index({ documents }: { documents: DocMeta[] }) {
   return (
     <>
-      <h1>Articles</h1>
-      <Documents documents={documents} />
+      <BioSide>
+        <Text>Articles:</Text>
+        <Documents documents={documents} />
+      </BioSide>
     </>
   );
 }

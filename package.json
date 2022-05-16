@@ -1,6 +1,7 @@
 {
-  "name": "animr",
-  "version": "0.1.0",
+  "name": "pheralb.dev",
+  "version": "1.0.0",
+  "description": "My personal website",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@algolia/autocomplete-core": "^1.6.3",
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -17,6 +19,7 @@
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
     "next-mdx-remote": "^4.0.3",
+    "nextjs-progressbar": "^0.0.14",
     "phosphor-react": "^1.4.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",

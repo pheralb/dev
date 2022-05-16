@@ -10,13 +10,18 @@ import {
   IconButton,
   CloseButton,
   Text,
-  Icon,
+  Link,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
-import HeaderLinks from "components/layout/links";
 import { MagnifyingGlass } from "phosphor-react";
-import Heart from "components/icons/heart";
-import List from "library/list";
+import { IoMenu, IoSearchOutline } from "react-icons/io5";
+import NextLink from "next/link";
+import DarkMode from "components/layout/darkMode";
+import IconBtns from "components/buttons/iconBtns";
+import HeaderLinks from "components/layout/links";
+import Command from "components/command";
+import { AnimatePresence, motion } from "framer-motion";
+import Tap from "animations/tap";
 
 const Header = () => {
   const bg = useColorModeValue("bg.light", "bg.dark");
@@ -24,83 +29,79 @@ const Header = () => {
   const mobileNav = useDisclosure();
 
   return (
-    <Box
-      bg={bg}
-      w="full"
-      px={{ base: 2, sm: 5 }}
-      py={4}
-      pr={{ base: 2, sm: 7 }}
-    >
+    <Box bg={bg} backdropBlur="md" w="full" pos="sticky" pr="8" pl="8" py="5" top="0">
       <Flex alignItems="center" justifyContent="space-between" mx="auto">
-        <HStack spacing={3}>
-          <Text fontSize="2xl" fontFamily="Inter-Semibold">
-            animr
-          </Text>
-          <Text fontFamily="Virgil" fontSize="13px" color={betaColor}>
-            beta
-          </Text>
-          <Heart width={20} height={25} />
-        </HStack>
-
+        <Tap>
+          <NextLink href={"/"} passHref>
+            <Link
+              _hover={{ border: 0, textDecoration: "none" }}
+              _focus={{ border: 0 }}
+            >
+              <HStack spacing={0}>
+                <Text fontSize="17px" fontFamily="Inter-Semibold">
+                  pheralb
+                </Text>
+              </HStack>
+            </Link>
+          </NextLink>
+        </Tap>
         <HStack display="flex" alignItems="center" spacing={1}>
-          <HStack spacing={5} display={{ base: "none", md: "inline-flex" }}>
-            <MagnifyingGlass size={24} weight="bold" />
+          <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
             {HeaderLinks.map((link, i) => (
-              <Icon
-                aria-label={link.title}
-                key={link.title}
-                as={link.icon}
-                boxSize={7}
-              />
+              <NextLink key={link.id} href={link.href} passHref>
+                <Link isExternal={link.external}>
+                  <IconBtns title={link.title} icon={link.icon} />
+                </Link>
+              </NextLink>
             ))}
+            <Command />
+            <DarkMode />
           </HStack>
           <Box display={{ base: "inline-flex", md: "none" }}>
             <IconButton
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
-              fontSize="20px"
-              color={useColorModeValue("gray.800", "inherit")}
               variant="ghost"
-              icon={<AiOutlineMenu />}
+              icon={<IoMenu size="22" />}
+              borderWidth="1px"
               onClick={mobileNav.onOpen}
             />
-
-            <VStack
-              pos="absolute"
-              top={0}
-              left={0}
-              right={0}
-              display={mobileNav.isOpen ? "flex" : "none"}
-              flexDirection="column"
-              p={2}
-              pb={4}
-              m={2}
-              bg={bg}
-              spacing={3}
-              rounded="sm"
-              shadow="sm"
-            >
-              <CloseButton
-                aria-label="Close menu"
-                onClick={mobileNav.onClose}
-              />
-
-              <Button w="full" variant="ghost">
-                Features
-              </Button>
-              <Button w="full" variant="ghost">
-                Pricing
-              </Button>
-              <Button w="full" variant="ghost">
-                Blog
-              </Button>
-              <Button w="full" variant="ghost">
-                Company
-              </Button>
-              <Button w="full" variant="ghost">
-                Sign in
-              </Button>
-            </VStack>
+            <AnimatePresence exitBeforeEnter initial={false}>
+              {mobileNav.isOpen && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <VStack
+                    pos="fixed"
+                    top={0}
+                    left={0}
+                    right={0}
+                    display={mobileNav.isOpen ? "flex" : "none"}
+                    p={2}
+                    bg={bg}
+                    spacing={3}
+                    rounded="sm"
+                    shadow="sm"
+                    borderWidth="1px"
+                  >
+                    <CloseButton
+                      aria-label="Close menu"
+                      onClick={mobileNav.onClose}
+                    />
+                    {HeaderLinks.map((link, i) => (
+                      <NextLink key={link.id} href={link.href} passHref>
+                        <Link isExternal={link.external}>
+                          <IconBtns title={link.title} icon={link.icon} />
+                        </Link>
+                      </NextLink>
+                    ))}
+                  </VStack>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </Box>
         </HStack>
       </Flex>

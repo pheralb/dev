@@ -24,9 +24,14 @@
 }
 
 @font-face {
-  font-family: "Virgil";
-  src: url("/fonts/Virgil.woff2") format("woff2");
+  font-family: "SortsMillGoudy-Regular";
+  src: url("/fonts/SortsMillGoudy-Regular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+}
+
+body {
+  background: radial-gradient(#000 4px, transparent 5px);
+  background-size: 50px 50px;
 }

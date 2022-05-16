@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "components/layout/header";
+import { Container } from "@chakra-ui/react";
 
 type Props = {
   children: React.ReactNode;
@@ -9,7 +10,9 @@ const Index = (props: Props) => {
   return (
     <>
       <Header />
-      {props.children}
+      <Container maxW="98%">
+        {props.children}
+      </Container>
     </>
   );
 };

@@ -2,21 +2,36 @@ import type { AppProps } from "next/app";
 
 // Chakra UI ->
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "theme";
 
 // Custom Theme ->
+import theme from "theme";
 import "styles/globals.css";
 
 // Components ->
 import Layout from "components/layout";
+import AnimatePage from "animations/animatePage";
 
-function MyApp({ Component, pageProps }: AppProps) {
+// nProgress effect ->
+import NextNProgress from "nextjs-progressbar";
+
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <>
+      <NextNProgress
+        color="#144E7E"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={2}
+        showOnShallow={true}
+      />
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <AnimatePage key={router.route}>
+            <Component {...pageProps} />
+          </AnimatePage>
+        </Layout>
+      </ChakraProvider>
+    </>
   );
 }
 
