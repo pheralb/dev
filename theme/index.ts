@@ -21,7 +21,7 @@ const theme = extendTheme({
   },
   fonts: {
     body: "Inter-Regular, sans-serif",
-    heading: "Inter-Medium, sans-serif",
+    heading: "Inter-Semibold, sans-serif",
     mono: "Menlo, monospace",
   },
   styles: {

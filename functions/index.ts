@@ -26,7 +26,6 @@ export const getAllDocs = () => {
 
 // Get all docs from slug ->
 export const getDocsFromSlug = (slug: string): Doc => {
-  console.log(slug);
   const realSlug = slug.replace(/\.mdx$/, "");
   const postPath = path.join(docsDirectory, `${realSlug}.mdx`);
   const source = fs.readFileSync(postPath, "utf8");

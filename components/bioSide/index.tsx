@@ -18,18 +18,19 @@ const Index = ({ children }: Props) => {
       pb="10"
       overflowX="hidden"
       overflowY="auto"
+      shadow="md"
       borderWidth="1px"
       borderRadius="10px"
       borderColor={borderColor}
-      w="445px"
+      w="420px"
       {...props}
     >
       <Flex direction="column" py="10">
         <Text fontFamily="Inter-Semibold" fontSize="5xl" textAlign="center">
           Pablo Hernández
         </Text>
-        <Box pr="40px" pl="40px" pt="1">
-          <Text>Web developer.</Text>
+        <Box pr="31px" pl="31px" pt="1">
+          <Text>I'm a web developer.</Text>
         </Box>
       </Flex>
     </Box>
@@ -38,7 +39,7 @@ const Index = ({ children }: Props) => {
   return (
     <Box as="section">
       <SideContent display={{ base: "none", md: "unset" }} />
-      <Box ml={{ base: 0, md: "480px" }} transition=".3s ease">
+      <Box ml={{ base: 0, md: "460px" }} transition=".3s ease">
         <Box as="main">{children}</Box>
       </Box>
     </Box>
