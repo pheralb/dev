@@ -1,7 +1,7 @@
 import React from "react";
 import { Badge, Box, Text, Heading, useColorModeValue } from "@chakra-ui/react";
-import CustomLink from "src/components/link";
-import { Card } from "src/interfaces/card";
+import CustomLink from "@/components/link";
+import { Card } from "@/interfaces/card";
 
 const CardMini = ({ title, description, tags, url }: Card) => {
   const descriptionColor = useColorModeValue("gray.600", "gray.400");

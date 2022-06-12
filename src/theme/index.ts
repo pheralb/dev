@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { ChakraProps, extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
@@ -25,7 +25,7 @@ const theme = extendTheme({
     mono: "Menlo, monospace",
   },
   styles: {
-    global: (props: any) => ({
+    global: (props: ChakraProps) => ({
       "html, body": {
         height: "100%",
         maxHeight: "100vh",

@@ -1,5 +1,4 @@
-import { Box, Flex, Text, useColorModeValue, VStack } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 
 type Props = {
   children: React.ReactNode;
@@ -30,7 +29,7 @@ const Index = ({ children }: Props) => {
           Pablo Hernández
         </Text>
         <Box pr="31px" pl="31px" pt="1">
-          <Text>I'm a web developer.</Text>
+          <Text>Web developer.</Text>
         </Box>
       </Flex>
     </Box>

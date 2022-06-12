@@ -1,5 +1,5 @@
 import React from "react";
-import { Svg } from "src/interfaces/svg";
+import { Svg } from "@/interfaces/svg";
 
 const AnimrIcon = ({ width, height }: Svg) => {
   return (

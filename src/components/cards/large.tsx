@@ -1,7 +1,6 @@
 import { Box, Image, Heading } from "@chakra-ui/react";
-import CustomLink from "src/components/link";
-import { Card } from "src/interfaces/card";
-import React from "react";
+import CustomLink from "@/components/link";
+import { Card } from "@/interfaces/card";
 
 const CardLarge = ({ title, image, url, external }: Card) => {
   return (
@@ -9,7 +8,7 @@ const CardLarge = ({ title, image, url, external }: Card) => {
       <Box borderWidth="1px" rounded="lg" shadow="lg">
         <Image src={image} alt={title} roundedTop="lg" />
         <Box p="6">
-          <Heading mt="1" fontSize="18px" lineHeight="tight" isTruncated>
+          <Heading mt="1" fontSize="18px" lineHeight="tight">
             {title}
           </Heading>
         </Box>

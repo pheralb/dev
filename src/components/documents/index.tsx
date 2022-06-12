@@ -1,5 +1,5 @@
-import { DocMeta } from "src/interfaces/docMeta";
-import Card from "src/components/cards/mini";
+import { DocMeta } from "@/interfaces/docMeta";
+import Card from "@/components/cards/mini";
 
 const Index = ({ documents }: { documents: DocMeta[] }) => {
   return (

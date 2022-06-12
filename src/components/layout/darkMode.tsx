@@ -1,8 +1,8 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
-import IconBtns from "src/components/buttons/iconBtns";
+import IconBtns from "@/components/buttons/iconBtns";
 
 type Props = {};
 

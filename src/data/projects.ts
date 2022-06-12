@@ -14,11 +14,6 @@ const ProjectsData = [
     url: "https://gifit.vercel.app/",
     tags: ["React", "Giphy API", "Javascript", "Chakra UI"],
     external: true,
-  },
-  {
-    id: 3,
-    title: "weathr",
-    
   }
 ];
 

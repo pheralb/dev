@@ -1,11 +1,11 @@
 import { GetStaticProps } from "next";
-import { getAllDocs } from "src/functions";
-import { DocMeta } from "src/interfaces/docMeta";
+import { getAllDocs } from "@/functions";
+import { DocMeta } from "@/interfaces/docMeta";
 
-import Documents from "src/components/documents";
-import BioSide from "src/components/bioSide";
-import Section from "src/components/section";
-import Projects from "src/components/projects";
+import Documents from "@/components/documents";
+import BioSide from "@/components/bioSide";
+import Section from "@/components/section";
+import Projects from "@/components/projects";
 
 export default function Index({ documents }: { documents: DocMeta[] }) {
   return (

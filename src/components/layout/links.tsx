@@ -1,4 +1,4 @@
-import { IoHomeOutline, IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { IoHomeOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { FiTwitter } from "react-icons/fi";
 
 const HeaderLinks = [

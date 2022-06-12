@@ -12,13 +12,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { IoMenu } from "react-icons/io5";
-import DarkMode from "src/components/layout/darkMode";
-import IconBtns from "src/components/buttons/iconBtns";
-import HeaderLinks from "src/components/layout/links";
-import Command from "src/components/command";
+import DarkMode from "@/components/layout/darkMode";
+import IconBtns from "@/components/buttons/iconBtns";
+import HeaderLinks from "@/components/layout/links";
+import Command from "@/components/command";
 import { AnimatePresence, motion } from "framer-motion";
-import Tap from "src/animations/tap";
-import CustomLink from "src/components/link";
+import Tap from "@/animations/tap";
+import CustomLink from "@/components/link";
 
 const Header = () => {
   const bg = useColorModeValue("bg.light", "bg.dark");

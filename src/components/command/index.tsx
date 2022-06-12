@@ -3,21 +3,15 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
-  ModalCloseButton,
   useDisclosure,
-  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
 import IconBtns from "src/components/buttons/iconBtns";
 import { BiCommand } from "react-icons/bi";
 import Form from "src/components/command/form";
 
-type Props = {};
-
-const Index = (props: Props) => {
+const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const bg = useColorModeValue("bg.light", "bg.dark");
   return (

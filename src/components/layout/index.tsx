@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "src/components/layout/header";
+import Header from "@/components/layout/header";
 import { Container } from "@chakra-ui/react";
 
 type Props = {

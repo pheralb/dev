@@ -1,4 +1,4 @@
-import { Svg } from "src/interfaces/svg";
+import { Svg } from "@/interfaces/svg";
 import React from "react";
 
 const LeftArrow = ({ width, height }: Svg) => {

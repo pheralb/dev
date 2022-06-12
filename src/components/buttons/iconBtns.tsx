@@ -1,6 +1,5 @@
 import { IconButton, Tooltip, useColorModeValue } from "@chakra-ui/react";
-import Tap from "src/animations/tap";
-import React from "react";
+import Tap from "@/animations/tap";
 
 type Props = {
   title: string;

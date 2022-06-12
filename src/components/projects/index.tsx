@@ -1,7 +1,7 @@
 import React from "react";
-import ProjectsData from "src/data/projects";
-import Card from "src/components/cards/large";
-import ProjectsGrid from "src/components/projects/grid";
+import ProjectsData from "@/data/projects";
+import Card from "@/components/cards/large";
+import ProjectsGrid from "@/components/projects/grid";
 
 const Index = () => {
   return (

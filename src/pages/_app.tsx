@@ -5,11 +5,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 // Custom Theme ->
 import theme from "src/theme";
-import "styles/globals.css";
+import "@/styles/globals.css";
 
 // Components ->
-import Layout from "src/components/layout";
-import AnimatePage from "src/animations/animatePage";
+import Layout from "@/components/layout";
+import AnimatePage from "@/animations/animatePage";
 
 // nProgress effect ->
 import NextNProgress from "nextjs-progressbar";
