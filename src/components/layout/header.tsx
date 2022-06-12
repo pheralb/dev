@@ -4,21 +4,19 @@ import {
   Flex,
   useColorModeValue,
   HStack,
-  Button,
   useDisclosure,
   VStack,
   IconButton,
   CloseButton,
   Text,
 } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 import DarkMode from "@/components/layout/darkMode";
-import IconBtns from "@/components/buttons/iconBtns";
 import HeaderLinks from "@/components/layout/links";
 import Command from "@/components/command";
-import { AnimatePresence, motion } from "framer-motion";
+import { IconBtn, CustomLink } from "@/common";
 import Tap from "@/animations/tap";
-import CustomLink from "@/components/link";
 
 const Header = () => {
   const bg = useColorModeValue("bg.light", "bg.dark");
@@ -50,7 +48,7 @@ const Header = () => {
           <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
             {HeaderLinks.map((link, i) => (
               <CustomLink key={i} href={link.href} external={link.external}>
-                <IconBtns title={link.title} icon={link.icon} />
+                <IconBtn title={link.title} icon={link.icon} />
               </CustomLink>
             ))}
             <Command />
@@ -92,7 +90,7 @@ const Header = () => {
                     />
                     {HeaderLinks.map((link, i) => (
                       <CustomLink key={i} href={link.href}>
-                        <IconBtns title={link.title} icon={link.icon} />
+                        <IconBtn title={link.title} icon={link.icon} />
                       </CustomLink>
                     ))}
                   </VStack>

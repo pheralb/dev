@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge, Box, Text, Heading, useColorModeValue } from "@chakra-ui/react";
-import CustomLink from "@/components/link";
+import { CustomLink } from "@/common";
 import { Card } from "@/interfaces/card";
 
 const CardMini = ({ title, description, tags, url }: Card) => {

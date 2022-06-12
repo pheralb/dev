@@ -7,7 +7,7 @@ import {
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
-import IconBtns from "src/components/buttons/iconBtns";
+import { IconBtn } from "@/common";
 import { BiCommand } from "react-icons/bi";
 import Form from "src/components/command/form";
 
@@ -16,7 +16,7 @@ const Index = () => {
   const bg = useColorModeValue("bg.light", "bg.dark");
   return (
     <>
-      <IconBtns
+      <IconBtn
         title="Commands (beta)"
         icon={<BiCommand size={22} />}
         onClick={onOpen}

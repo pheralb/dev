@@ -1,5 +1,5 @@
 import { Box, Image, Heading } from "@chakra-ui/react";
-import CustomLink from "@/components/link";
+import { CustomLink } from "@/common";
 import { Card } from "@/interfaces/card";
 
 const CardLarge = ({ title, image, url, external }: Card) => {

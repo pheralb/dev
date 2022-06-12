@@ -1,7 +1,12 @@
 {
   "name": "pheralb.dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My personal website",
+  "homepage": "https://pheralb.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pheralb/dev"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,7 +28,6 @@
     "phosphor-react": "1.4.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-icons": "4.4.0",
     "rehype-autolink-headings": "6.1.1",
     "rehype-highlight": "5.0.2",
     "rehype-slug": "5.0.1"

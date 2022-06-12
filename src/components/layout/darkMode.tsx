@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
-import IconBtns from "@/components/buttons/iconBtns";
+import { IconBtn } from "@/common";
 
 type Props = {};
 
@@ -23,7 +23,7 @@ const DarkMode = (props: Props) => {
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        <IconBtns
+        <IconBtn
           title={`${key} theme`}
           aria-label="Toggle theme"
           icon={icon}
