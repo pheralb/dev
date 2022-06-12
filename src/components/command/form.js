@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { ArrowSquareOut } from "phosphor-react";
 
 const ResultItem = ({ id, title, href, external, url }) => {
   const bg = useColorModeValue("bg.light", "bg.dark");
@@ -30,7 +30,7 @@ const ResultItem = ({ id, title, href, external, url }) => {
             <HStack>
               <Image src={href} boxSize="20px" mr="2" />
               <Text>{title}</Text>
-              {external && <Icon as={HiOutlineExternalLink} />}
+              {external && <Icon as={ArrowSquareOut} />}
             </HStack>
           </Link>
         </NextLink>

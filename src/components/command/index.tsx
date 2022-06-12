@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { IconBtn } from "@/common";
-import { BiCommand } from "react-icons/bi";
+import { Command } from "phosphor-react";
 import Form from "src/components/command/form";
 
 const Index = () => {
@@ -18,7 +18,7 @@ const Index = () => {
     <>
       <IconBtn
         title="Commands (beta)"
-        icon={<BiCommand size={22} />}
+        icon={<Command size={22} />}
         onClick={onOpen}
       />
       <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom">

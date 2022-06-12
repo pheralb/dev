@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IoMenu } from "react-icons/io5";
+import { List } from "phosphor-react";
 import DarkMode from "@/components/layout/darkMode";
 import HeaderLinks from "@/components/layout/links";
 import Command from "@/components/command";
@@ -59,7 +59,7 @@ const Header = () => {
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
               variant="ghost"
-              icon={<IoMenu size="22" />}
+              icon={<List size="22" />}
               borderWidth="1px"
               onClick={mobileNav.onOpen}
             />

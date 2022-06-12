@@ -1,5 +1,4 @@
-import { IoHomeOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { FiTwitter } from "react-icons/fi";
+import { House, TwitterLogo, GitBranch, LinkedinLogo } from "phosphor-react";
 
 const HeaderLinks = [
   {
@@ -7,28 +6,28 @@ const HeaderLinks = [
     href: "/",
     external: false,
     title: "Home",
-    icon: <IoHomeOutline size="22" />,
+    icon: <House size="22" />,
   },
   {
     id: 2,
     href: "https://twitter.com/pheralb_",
     external: true,
     title: "Twitter",
-    icon: <FiTwitter size="22" />,
+    icon: <TwitterLogo size="22" />,
   },
   {
     id: 3,
     href: "https://github.com/pheralb/",
     external: true,
     title: "Github",
-    icon: <IoLogoGithub size="22" />,
+    icon: <GitBranch size="22" />,
   },
   {
     id: 4,
     href: "https://www.linkedin.com/in/pheralb/",
     external: true,
     title: "LinkedIn",
-    icon: <IoLogoLinkedin size="22" />,
+    icon: <LinkedinLogo size="22" />,
   },
 ];
 
