@@ -14,10 +14,10 @@ const IconBtns = ({ title, icon, onClick, borderWidth }: Props) => {
   return (
     <Tap>
       <Tooltip
-        hasArrow
         label={title}
-        placement="bottom"
         aria-label={title}
+        borderWidth="1px"
+        borderRadius="5px"
         bg={bg}
         color={color}
       >

@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 
 type Props = {
-  key: string;
   children: React.ReactNode;
 };
 
-const List = ({ key, children }: Props) => {
+const List = ({ children }: Props) => {
   return (
     <motion.div
-      key={key}
       initial="initial"
       animate="animate"
       variants={{

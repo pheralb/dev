@@ -13,14 +13,13 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import { List } from "phosphor-react";
 import DarkMode from "@/components/layout/darkMode";
-import HeaderLinks from "@/components/layout/links";
 import Command from "@/components/command";
 import { IconBtn, CustomLink } from "@/common";
 import Tap from "@/animations/tap";
+import HeaderLinks from "@/data/headerLinks";
 
 const Header = () => {
   const bg = useColorModeValue("bg.light", "bg.dark");
-  const betaColor = useColorModeValue("gray.600", "gray.500");
   const mobileNav = useDisclosure();
 
   return (
@@ -71,18 +70,19 @@ const Header = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <VStack
+                  <HStack
                     pos="fixed"
                     top={0}
                     left={0}
                     right={0}
                     display={mobileNav.isOpen ? "flex" : "none"}
-                    p={2}
+                    p={3}
                     bg={bg}
                     spacing={3}
                     rounded="sm"
                     shadow="sm"
                     borderWidth="1px"
+                    justifyContent="center"
                   >
                     <CloseButton
                       aria-label="Close menu"
@@ -93,7 +93,7 @@ const Header = () => {
                         <IconBtn title={link.title} icon={link.icon} />
                       </CustomLink>
                     ))}
-                  </VStack>
+                  </HStack>
                 </motion.div>
               )}
             </AnimatePresence>
