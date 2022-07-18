@@ -6,12 +6,17 @@
     "dev": "remix dev"
   },
   "dependencies": {
-    "@remix-run/node": "^1.6.5",
-    "@remix-run/react": "^1.6.5",
-    "@remix-run/vercel": "^1.6.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rehype-highlight": "^5.0.2"
+    "@chakra-ui/react": "2.2.4",
+    "@emotion/react": "11.9.3",
+    "@emotion/server": "11.4.0",
+    "@emotion/styled": "11.9.3",
+    "@remix-run/node": "1.6.5",
+    "@remix-run/react": "1.6.5",
+    "@remix-run/vercel": "1.6.5",
+    "framer-motion": "6.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rehype-highlight": "5.0.2"
   },
   "devDependencies": {
     "@remix-run/dev": "1.6.5",
